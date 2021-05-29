@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      {{titulo}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{titulo}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<div id="container p">
+<ion-item>
+  <ion-label>Informe o seu salário:</ion-label>
+<ion-input type="number" [(ngModel)]="valorBruto"></ion-input>
+
+<ion-label>Quantos dependentes:</ion-label>
+  <ion-input type="number" [(ngModel)]="qtdeDependente"></ion-input>
+
+<ion-label>Outros Descontos:</ion-label>
+  <ion-input type="number" [(ngModel)]="outrosDescontos"></ion-input>
+
+<ion-button color="primary" (click)= 'calcular().toFixed(2)'>Calcular</ion-button>
+
+</ion-item>
+</div>
+
+<div id="container p">
+<ion-item>
+<ion-label>Seu Salário líquido será de aproximadamente:{{valorLiquido}}</ion-label>
+</ion-item>
+</div>
+
+
+   <div id="container">
+    <strong></strong>
+    <p><a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"></a></p>
+  </div>
+</ion-content>
